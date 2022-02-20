@@ -1,0 +1,867 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/*font-family: 'Poppins', sans-serif;
+font-family: 'Ubuntu', sans-serif;*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+
+/*navbar*/
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 999;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background-color: crimson;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: crimson;
+    transition: all 0.3s ease;
+}
+
+.sticky .logo a span {
+    color: #111;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: crimson;
+    transition: color 0.3s ease;
+}
+
+.sticky .menu li a:hover {
+    color: #111;
+    transition: color 0.3s ease;
+}
+
+
+/*menu btn*/
+
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*home section*/
+
+.home {
+    display: flex;
+    height: 100vh;
+    min-height: 500px;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    background: url("/sp2.png") no-repeat right;
+    background-size: cover;
+}
+
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-contnet .text-1 {
+    font-size: 27px;
+}
+
+.home .home-contnet .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-contnet .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-contnet .text-3 span {
+    color: crimson;
+    font-weight: 500;
+}
+
+.home .home-contnet a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.home .home-contnet a:hover {
+    color: crimson;
+    background: none;
+}
+
+
+/*all section style*/
+
+section {
+    padding: 100px 0;
+}
+
+.about,
+.services,
+.skills,
+.blog,
+.contcat,
+footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+section .title {
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    padding: 5px;
+    font-size: 20px;
+    color: crimson;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.about .about-contnet,
+.services .services-contnet,
+.skills .skills-contnet,
+.contcat .contcat-contnet {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/*about me section*/
+
+.about .title::after {
+    content: "Who I'm?";
+}
+
+.about .about-contnet .left {
+    width: 45%;
+}
+
+.about .about-contnet .rigth {
+    width: 55%;
+}
+
+.about .about-contnet .rigth .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-contnet .rigth .text span {
+    color: crimson;
+}
+
+.about .about-contnet .rigth .text p {
+    text-align: justify;
+}
+
+.about .about-contnet .rigth a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.about .about-contnet .rigth a:hover {
+    color: crimson;
+    font-weight: 500;
+    background: none;
+}
+
+.about .about-contnet .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+/*services section*/
+
+.services,
+.blog {
+    color: #fff;
+    background: #111;
+}
+
+.services .title::before,
+.blog .title::before {
+    background: #fff;
+}
+
+.services .title::after {
+    content: "What I provide?";
+    background: #111;
+}
+
+.services .services-contnet .card {
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.services .services-contnet .card:hover {
+    background: crimson;
+}
+
+.services .services-contnet .card:hover i {
+    color: #222;
+}
+
+.services .services-contnet .card:hover .box {
+    transform: scale(1.05);
+}
+
+.services .services-contnet .card i {
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.5s ease;
+}
+
+.services .services-contnet .card .box {
+    transition: all 0.5s ease;
+}
+
+.services .services-contnet .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+/*skills section*/
+
+.skills .title::after {
+    content: "What I Know?";
+}
+
+.skills .skills-contnet .column {
+    width: calc(50% - 30px);
+}
+
+.skills .skills-contnet .left .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .skills-contnet .left p {
+    text-align: justify;
+}
+
+.skills .skills-contnet .left a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.skills .skills-contnet .left a:hover {
+    color: crimson;
+    background: none;
+}
+
+.skills .skills-contnet .rigth .bars {
+    margin-bottom: 15px;
+}
+
+.skills .skills-contnet .rigth .info {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-contnet .rigth span {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills .skills-contnet .rigth .line {
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+}
+
+.skills .skills-contnet .rigth .line::before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+
+.skills .skills-contnet .rigth .html::before {
+    width: 90%;
+}
+
+.skills .skills-contnet .rigth .css::before {
+    width: 75%;
+}
+
+.skills .skills-contnet .rigth .js::before {
+    width: 60%;
+}
+
+.skills .skills-contnet .rigth .php::before {
+    width: 60%;
+}
+
+.skills .skills-contnet .rigth .sql::before {
+    width: 70%;
+}
+
+
+/*blog section*/
+
+.blog .title::after {
+    content: "My Latest Posts";
+    background: #111;
+}
+
+.blog .carousel .card {
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.blog .carousel .card:hover {
+    background: crimson;
+}
+
+.blog .carousel .card img {
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 5px solid crimson;
+    transition: all 0.5s ease;
+}
+
+.blog .carousel .card:hover img {
+    border-color: #111;
+}
+
+.blog .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog .carousel .card:hover .box {
+    transform: scale(1.05);
+}
+
+.blog .carousel .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    color: crimson;
+}
+
+.blog .carousel .card .box a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px 12px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    width: 13px;
+    height: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid crimson;
+    transition: all 0.5s ease;
+    background: #333 !important;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: crimson !important;
+}
+
+.blog .carousel .card:hover .box a:hover {
+    color: #222;
+    background: #fff;
+    border: 2px solid #222;
+}
+
+
+/*contcat section*/
+
+.contcat .title::after {
+    content: "Get In Touch";
+}
+
+.contcat .contcat-contnet .column {
+    width: calc(50% - 30px);
+}
+
+.contcat .contcat-contnet .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contcat .contcat-contnet .left p {
+    text-align: justify;
+}
+
+.contcat .contcat-contnet .left .icons {
+    margin: 10px 0;
+}
+
+.contcat .contcat-contnet .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contcat .contcat-contnet .row .info {
+    margin-left: 30px;
+}
+
+.contcat .contcat-contnet .row i {
+    font-size: 25px;
+    color: crimson;
+}
+
+.contcat .contcat-contnet .info .head {
+    font-weight: 500;
+}
+
+.contcat .contcat-contnet .info .sub-title {
+    color: #333;
+}
+
+.contcat .rigth form .fields {
+    display: flex;
+}
+
+.contcat .rigth form .field,
+.contcat .rigth form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contcat .rigth form .textarea {
+    height: 80px;
+    width: 100%;
+}
+
+.contcat .rigth form .name {
+    margin-right: 10px;
+}
+
+.contcat .rigth form .email {
+    margin-left: 10px;
+}
+
+.contcat .rigth form .field input,
+.contcat .rigth form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contcat .rigth form .textarea textarea {
+    padding-bottom: 10px;
+    resize: none;
+}
+
+.contcat .rigth form .button {
+    height: 47px;
+    width: 100%;
+}
+
+.contcat .rigth form .button button {
+    height: 100%;
+    width: 100%;
+    border: 2px solid crimson;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.contcat .rigth form .button button:hover {
+    color: crimson;
+    background: none;
+}
+
+
+/*footer section*/
+
+footer {
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
+
+footer span a {
+    color: crimson;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+
+/*scroll up btn*/
+
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    right: 30px;
+    bottom: 10px;
+    z-index: 9999;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    background: crimson;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/*medai box*/
+
+.media-box {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+}
+
+.media-box .mes {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: 6px;
+    background: crimson;
+}
+
+.media-box .mes.heddin {
+    display: none;
+}
+
+.media-box .mes i {
+    font-size: 25px;
+    color: #111;
+}
+
+.media-item {
+    display: none;
+}
+
+.media-item.show-box {
+    display: block;
+}
+
+.media-item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: 6px;
+    background: crimson;
+}
+
+.media-item a i {
+    font-size: 25px;
+    color: #111;
+}
+
+
+/* media query */
+
+@media (max-width: 1300px) {
+    .max-width {
+        padding: 0 50px;
+    }
+    .home .max-width {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px) {
+    .max-width {
+        padding: 0 50px;
+    }
+    .home .max-width {
+        margin-left: 0px;
+    }
+    /*about me*/
+    .about .about-contnet .left img {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .fa-times {
+        color: #fff;
+        transition: all 0.5s ease;
+    }
+    .fa-times:hover {
+        color: crimson;
+        transition: color 0.5s ease;
+    }
+    .fa-bars {
+        transition: all 0.5s ease;
+    }
+    .navbar .menu-btn:hover {
+        color: crimson;
+        transition: color 0.3s ease;
+    }
+    .sticky .menu-btn:hover {
+        color: #111;
+        transition: color 0.3s ease;
+    }
+    .max-width {
+        padding: 0 50px;
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        padding-top: 80px;
+        text-align: center;
+        background: #111;
+        transition: all 0.5s ease;
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25xp;
+    }
+    .navbar .menu li a:hover {
+        color: crimson;
+        transition: color 0.3s ease;
+    }
+    /*home saction*/
+    .home .home-contnet .text-2 {
+        font-size: 70px;
+    }
+    .home .home-contnet .text-3 {
+        font-size: 35px;
+    }
+    .home .home-contnet a {
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width {
+        max-width: 800px;
+    }
+    /*about me section*/
+    .about .about-contnet .column {
+        width: 100%;
+    }
+    .about .about-contnet .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-contnet .rigth {
+        flex: 100%;
+    }
+    /*services section*/
+    .services .services-contnet .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-contnet .column,
+    .contcat .contcat-contnet .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width {
+        padding: 0 23px;
+    }
+    .home .home-contnet .text-2 {
+        font-size: 60px;
+    }
+    .home .home-contnet .text-3 {
+        font-size: 32px;
+    }
+    .home .home-contnet a {
+        font-size: 20px;
+    }
+    /*section*/
+    .services .services-contnet .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-contnet .text-2 {
+        font-size: 50px;
+    }
+    .home .home-contnet .text-3 {
+        font-size: 27px;
+    }
+}
